@@ -1,8 +1,7 @@
 // Write the alphabet from lower to upper case
 // let alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 // let alphabet_len = alphabet.length;
-// let alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-// let alphabet_len = alphabet.length;
+
 
 let input_data = document.getElementById("input-data"), send_button = document.getElementById("send-button"), project_id_used = document.getElementById("project-id-used");
 
