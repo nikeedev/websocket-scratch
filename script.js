@@ -1,5 +1,6 @@
-
 // Write the alphabet from lower to upper case
+// let alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+// let alphabet_len = alphabet.length;
 // let alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 // let alphabet_len = alphabet.length;
 
@@ -57,4 +58,21 @@ wss.onmessage = (event) => {
 wss.onclose = (event) => {
     console.log(event);
     console.log("Closed connection")
+}
+
+function update() {
+    variable_name = name_data.value;
+    task = task_data.value;
+    // console.log("Var name: " + variable_name)
+
+    requestAnimationFrame(update);
+}
+requestAnimationFrame(update);
+
+send_button.onclick = (event) => {
+    if (task == "rename") {
+        JSON.stringify({ "method": "rename", "name": "☁ " + variable_name, "value": input_data.value });
+    } 
+    websocket.send();
+    console.log("Value " + input_data.value + " sent");
 }
